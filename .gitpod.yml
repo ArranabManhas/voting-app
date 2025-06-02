@@ -1,3 +1,10 @@
+tasks:
+  - init: |
+      # Automatically authenticate to Docker Hub (using Gitpod Variables)
+      echo "$DOCKERHUB_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+
+# (Any other Gitpod configuration can go below)
+
 image: gitpod/workspace-full
 
 tasks:
